@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Final payoff
+{% endblock %}
+
+{% block content %}
+
+ <div class="alert alert-success" role="alert">
+ <h4>
+  The round chosen for payment was round {{ payment_round }}. Your final payoff for the decision
+  making part is {{ app2_payoff }} and for the first part is {{ app1_payoff }}
+</h4>
+    </div>
+
+
+
+<button class="btn btn-primary btn-right btn-lg" onclick="self.close()">Close this window</button>
+
+
+
+{% endblock %}

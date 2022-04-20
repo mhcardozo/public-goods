@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}End of Round {{subsession.round_number}} {% endblock %}
+
+{% block content %}
+
+<p>In this round your Random Number was {{player.type}}, you chose Contract {{player.contract}} and thus allocated {{player.contribution}} to the Group Account and your Group Account had a total of {{group.total_contribution}}.<br>
+Your <b>total earnings</b> this round are <b>{{player.payoff}}</b>, where <br>
+{{player.indpayoff}} are your earnings from your <b>Individual Account</b> <br>
+{{player.grouppayoff}} are your earnings from your <b>Group Account</b> and <br>
+{{player.extratokens}} extra earned.
+<p>
+
+{% next_button %}
+
+{% endblock %}
