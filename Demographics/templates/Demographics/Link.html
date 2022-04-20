@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    End of Experiment Survey
+{% endblock %}
+
+{% block content %}
+    <p>
+    The Decision Rounds have finished. Please click on the link below that will direct you to a short survey. <b> Completion of this survey is necessary for payment.</b> In the survey you will be asked your participant ID, which is <b>{{player.participant.label}}</b>.
+    </p>
+    <p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSf9RqIREufRIhc-EUDgtjFHc0-3G8LuXOgWW7uTvBwjLCG-Ug/viewform?usp=sf_link">Click here to proceed to the survey</a>.
+    </p>
+
+{% endblock %}

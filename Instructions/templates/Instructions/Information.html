@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Information{% endblock %}
+
+{% block content %}
+
+Hello and welcome to the experiment! Before we begin with the instructions, please type your name and your email.
+
+{% formfields %}
+
+{% next_button %}
+
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+            <style>
+            .center {
+             text-align: center
+            }
+            </style>
+    <p class="center">Experiment Instructions</p>
+{% endblock %}
+
+
+{% block content %}
+
+<!--<h2>Introduction</h2>-->
+
+    <div>
+        <p> Welcome to this experiment in decision making. These instructions are the same for each of you participating today.  Please, read carefully as you will not be able to go back to the previous page on your browser.</p>
+    </div>
+    <div>
+        <p> This experiment consists of {{Constants.play_rounds}} decision rounds, in these rounds you can earn Tokens. At the end of the experiment these Tokens will be converted into US dollars at an exchange rate of 8 Tokens = $1.</p>
+    </div>
+    <div>
+        <p> After you finish reading the instructions, you will be asked to answer a few questions regarding the decisions you will make during the experiment. These questions will help you understand the calculation of your earnings and ensure that you have understood the instructions. You will only be allowed to progress with the experiment once you have selected the correct answer to each question, you will get feedback if you pick a wrong answer. You will have a summary of these instructions at the top of the page you are in during the questionnaire and during the decision-making rounds.</p>
+    </div>
+    <div>
+        <p> Finally, after the experiment is finished, you will be asked to fill out a short survey. Completion of this survey is required for payment. Check for the link to the survey in the Zoom room.</p>
+    </div>
+    <div>
+        <p> All decisions made by each participant and their earnings are private information. Your decisions and earnings will not be revealed to other participants.  In addition to your earnings in the experiment you will also receive a participation payment of $5.</p>
+    </div>
+
+<h2>Decisions and Earnings per Round in Tokens</h2>
+
+    <div> <b>At the beginning of each round,</b>
+    <ul>
+                <li> Each participant is randomly assigned to a group of 4.
+                </li>
+                <li> Each member of the group is given 80 Tokens in their Individual Account.
+                </li>
+                <li> The computer randomly and independently draws a number for each member of the group. This Random Number can be either 0.2, with probability 80%, or 0.4 with probability 20%.  Each member of the group is then informed about the Random Number that was drawn for them, but not about the Random Number drawn for the other group members.
+                </li>
+                <li> Each round, each group member <b>chooses 1 out of 3 Contracts</b>. Each Contract allocates a different number of Tokens from the member’s <b>Individual Account</b> to the group’s <b>Group Account</b>. More details are provided below.
+                </li>
+                <li> <b>Each member’s Earnings in Tokens from the Group Account</b> equals the number of Tokens their group allocated to the Group Account multiplied by their own Random Number, <b>but only if</b>  the total amount of Tokens in the Group Account <b>equals or exceeds a threshold of 70 Tokens</b>.
+                </li>
+                <li> If the total amount of <b>Tokens in the Group Account is less than 70, then all Tokens a group member has placed in the Group Account are refunded to their Individual Account</b> and the earnings from the Group Account are 0 for each group member.
+                </li>
+                <li> In summary, <b>each member’s earnings in Tokens in a round equals the earnings from their Individual Account plus their earnings from the Group Account</b>.
+                </li>
+            </ul>
+        </div>
+
+        <div> <b>Earnings from Individual Account</b> =  80 - the Tokens a member allocated to the Group Account + Tokens refunded (If there are 69 Tokens or less in the Group Account).
+        </div>
+
+        <div> <b>Earnings from Group Account </b> =  <i>can be either</i>
+         <ul>
+         <li> the member’s Random Number × Total Tokens in the Group Account (If there are 70 Tokens or more in the Group Account)  <b>or</b>
+         </li>
+         <li> 0 (zero) (If there are 69 Tokens or less in the Group Account).
+         </li>
+         </ul>
+        </div>
+
+        <div> <b>Each round, each group member will be offered 3 Contracts to choose from:</b>
+            <ul>
+            <li> <b> Contract 1: </b> Allocate 0 Tokens to the Group Account and receive your earnings from the Group Account + earnings from your Individual Account
+            </li>
+            <li> <b> Contract 2: </b> Allocate 13 Tokens to the Group Account and receive your earnings from the Group Account + earnings from your Individual Account
+            </li>
+            <li> <b> Contract 3: </b> Allocate 43 Tokens to the Group Account and receive your earnings from the Group Account + earnings from your Individual Account + receive 16 extra Tokens if there are 70 Tokens or more in the Group Account.
+            </li>
+            </ul>
+        </div>
+
+        <p> <b>At the end of each round</b>, each group member is informed of the total number of Tokens in the Group Account for their group and their own individual earnings in the round.
+        </p>
+
+        <h2>Your Dollar Earnings in the Experiment and Payment</h2>
+
+        <div>
+            <b>
+            <p>
+                At the end of the experiment, for each group member, the computer will randomly pick one of the {{Constants.play_rounds}} rounds of the experiment.
+            </p>
+            <p>
+                Each member’s cash earnings in the experiment will depend on their Token earnings from the round randomly chosen for them by the computer.
+            </p>
+            <p>
+                Each member’s Token earnings for the round chosen randomly for them will be converted to dollars at the exchange rate of 8 Tokens = $1. 
+            </p>
+            <p>
+                In addition to this, each group member will receive a $5 show up fee.
+                Your total earnings in the experiment will be sent to your Venmo account.
+            </p>
+            </b>
+        </div>
+
+        <h2>Examples for illustration</h2>
+        <div>
+            <p> Below you will find examples illustrating how to calculate <b>your earnings in Tokens</b> in each decision round. These examples are meant for illustration only.
+            </p>
+            <h5> Example 1</h5>
+            <style>
+            .center {
+             text-align: center
+            }
+            </style>
+            <p> Suppose your Random Number is 0.4 and you choose Contract 3 that allocates 43 Tokens to the Group Account. Furthermore, suppose that the total amount of Tokens in the Group Account is 82. Your round earnings are
+            </p>
+            <p class="center"> (80-43) + (0.4 × 82) + 16 = 85.8 </p>
+            <h5> Example 2</h5>
+            <p> Suppose your Random Number is 0.4 and you choose Contract 2 that allocates 13 Tokens to the Group Account. Furthermore, suppose that the total amount of Tokens in the Group Account is 99. Your round earnings are
+            </p>
+            <p class="center"> (80-13) + (0.4 × 99) = 106.6 </p>
+            <h5> Example 3</h5>
+            <p> Suppose your Random Number is 0.2 and you choose Contract 3 that allocates 43 Tokens to the Group Account. Furthermore, suppose that the total amount of Tokens in the Group Account is 69 or less. In this case, your allocation of 43 tokens is returned to you. Your round earnings are equal to the number of Tokens in your Individual Account which equals 80 Tokens.
+            </p>
+            <h5> Example 4</h5>
+            <p> Suppose your Random Number is 0.2 and you choose Contract 1 that allocates 0 Tokens to the Group Account. Furthermore, suppose that the total amount of Tokens in the Group Account is 99. Your round earnings are
+            </p>
+            <p class="center"> (80-0) + (0.2 × 99) = 99.8 </p>
+
+
+
+
+        </div>
+-----------------------------------------------------------------------------------------------------------------------------------------------
+<p>Once you have finished reading the instructions, click "Next" to proceed to the Questionnaire.</p>
+
+    {% next_button %}
+
+{% endblock %}

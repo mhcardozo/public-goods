@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Questions to Help your Understanding
+{% endblock %}
+
+{% block content %}
+    <p>
+    This part includes 6 multiple choice questions. For each question there’s only <b>one</b> correct answer. You need to answer all questions correctly in order to continue.
+    </p>
+    <p>
+    Click “Next” to continue.
+    </p>
+    {% next_button %}
+
+{% endblock %}
